@@ -18,16 +18,16 @@
 <body>
 	<div class="title1">Statistics and visualisation of ULEV in Essex (UK)</div>
 	<div class="title2">1. Introduction</div>
-	<p>The purpose of this study is to understand what the current situation in Essex about Ultra Low Emission Vehicle (ULEV). The British government 
+	<p>The purpose of this study is to understand what is the current situation in Essex about Ultra Low Emission Vehicle (ULEV). The British government 
 	   defines ULEV as vehicle that emits less than 75 CO2g/km (<a href="https://www.vehicle-certification-agency.gov.uk/fuel-consumption-co2/fuel-consumption-guide/zero-and-ultra-low-emission-vehicles-ulevs/#topic-title">ULEV definition</a>), 
 	   it mainly correspond to Battery Electric Vehicle (BEV) and Plug-in Hybrid Electric Vehicle (PHEV). The number of ULEV has dramatically increased 
-	   in the last decades pushed by the need to reduce the road emissions. This study is first focus on analysing the data related to ULEV in Essex, 
-	   including the geospatial, and charging infrastructure data. The data are coming from the government website: <a href="https://www.gov.uk/">gov.uk</a>. 
-	   The data used are up to date as of 2020 Q3 and split by postcode area (73 areas). The analysis and visualisation are done with python using the 
+	   in the last decades pushed by the need to reduce the road emissions. This study is focused on analysing the data related to ULEV in Essex, 
+	   including the geospatial onformation, and charging infrastructure. The data are coming from the government website: <a href="https://www.gov.uk/">gov.uk</a>. 
+	   The data used are up-to-date as of 2020 Q3 and split by postcode area (73 areas). The analysis and visualisation are done with python using the 
 	   libraries "bokeh" for the visualisation.</p>
     <div class="title2">2. ULEV Statistical analysis and visualisation</div>
-	<p>In 2020 Q3, there was 7840 ULEV in Essex, inequally split between the postcode areas. The postcode area CO8 (Braintree, Colchester) has only 13 ULEV 
-	   while the postcode area SS15 (Basildon) has 471 ULEV licensed. There is an average of 107 ULEV licensed per postcode area. </p>
+	<p>In 2020 Q3, there was 7840 ULEVs in Essex, inequally split across the postcode areas. The postcode area CO8 (Braintree, Colchester) has only 13 ULEVs licensed 
+	   while the postcode area SS15 (Basildon) has 471 ULEVs licensed. There is an average of 107 ULEVs licensed per postcode area. </p>
 	<!-- <div class="container"> -->
 	  <table style="width:100%">
 		<colgroup>
@@ -44,7 +44,7 @@
 	<!-- </div> -->
 	<br>
 	<p align="center"><object type="text/html" data="https://florentdsgree.github.io/EssexULEV/ULEVEssexPostcode_map.html" height="850px" width="950px"></object></p>
-	<p>- Some postcodes are shared accross multiple places/councils, that is why some "Councils" fields have multiple names.<br>
+	<p>- Some postcodes are shared across multiple places/councils, that is why some "Councils" fields have multiple names.<br>
 	   - The majority of postcode areas have between 35 and 160 ULEVs registered.<br>
 	   - In SS15 there is a peak number of ULEV, 471 vehicles, that could be seen on the distribution graph. It might be due to the presence of a Ford technical 
 	       centre (Ford Dunton) in this area and supported by the following comment that could be found in the raw data: "Vehicles are allocated to a local 
@@ -52,7 +52,7 @@
 		   address for company owned vehicles. The address does not necessarily reflect where the vehicle is located. This is especially true for large fleets kept 
 		   by companies involved with vehicle management, leasing or rentals. Significant changes in the number of vehicles from year to year can often occur when 
 		   these companies change their registered address."<br>
-	   - The postcode area SG8 (North West) is spread accross multiple counties and only a small part of it is in Essex. So the number of 285 ULEV is misleading 
+	   - The postcode area SG8 (North West) is spread across multiple counties and only a small part of it is in Essex. So the number of 285 ULEVs is misleading 
 	       as it represents the whole number of ULEV in all the postcode area not only the Essex part.<br></p>
 		   
 	<div class="title2">3. Cars Statistical analysis and visualisation</div>
@@ -76,7 +76,8 @@
 	<br>
 	<p align="center"><object type="text/html" data="https://florentdsgree.github.io/EssexULEV/CarsEssexPostcode_map.html" height="850px" width="950px"></object></p>
 	<br>
-	<p>- The highest number of cars licensed are in the centre of Essex around Chelmsford.<br>
+	<p>- The cars licensed are more evenly distributed than ULEVs between the postcode areas.
+	   - The highest number of cars licensed are in the centre of Essex around Chelmsford.<br>
        - The bigger the postcode area the higher the chance to have a big amount of cars licensed.<br></p>
 	
 	<div class="title2">4. ULEV vs Cars</div>
@@ -89,7 +90,7 @@
 	   
 	<div class="title2">5. Charging points</div>
 	<p>The charging points data are added to understand whether access to charging is enough based on the number of ULEV. There is a total of 108 charging points, 
-	   which compare to 7840 ULEV is very low (a bit more than 1 charger point for 100 ULEV).</p>
+	   which compare to 7840 ULEV is very low (a bit more than 1 charging point for 100 ULEVs).</p>
 	<!-- <div class="container"> -->
 	  <table style="width:100%">
 		<colgroup>
@@ -106,7 +107,7 @@
 	<!-- </div> -->
 	<br>
 	<p align="center"><object type="text/html" data="https://florentdsgree.github.io/EssexULEV/ChargingPointsEssexPostcode_map.html" height="850px" width="950px"></object></p>
-	<p>- More than 50% of the postcode areasdo not have charging points.<br>
+	<p>- More than 50% of the postcode areas do not have charging points.<br>
 	   - 2 postcode areas (CM4, CO2) have 9 charging points each which is the highest number.<br></p>
 	<p align="center"><object type="text/html" data="https://florentdsgree.github.io/EssexULEV/ChargingPointsPer100ULEVEssexPostcode_map.html" height="850px" width="950px"></object></p>
 	<p>- The postcode area RM20 (Thurrock) has the highest number of charging points per 100 ULEVs (16 charging points per 100 ULEVs).
