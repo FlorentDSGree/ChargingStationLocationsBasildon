@@ -18,7 +18,7 @@
 <body>
 	<div class="title1">Charging station locations for residential areas</div>
 	<div class="title2">1. Introduction</div>
-	<p>The purpose of this study is to suggest charging station location in residential areas. The locations will be given for Basildon borough. Few preliminary steps 
+	<p>The purpose of this study is to suggest charging station locations in residential areas. The locations will be given for Basildon borough. Few preliminary steps 
 	   are required including: 1) Data acquisition and pre-processing, 2) baseline analysis, 3) ULEV forecast, 4) charging station locations model and location definition. 
 	   The data are coming from open source data such as <a href="https://www.gov.uk/">gov.uk</a>, <a href="https://geoportal.statistics.gov.uk/">geoportal.statistics.gov.uk</a>,
 	   <a href="https://chargepoints.dft.gov.uk/">chargepoints.dft.gov.uk</a>, <a href="https://osdatahub.os.uk/">osdatahub.os.uk</a>, <a href="https://www.openstreetmap.org/">openstreetmap.org</a>.	
@@ -48,13 +48,13 @@
 	<!-- </div> -->
 	<br>
 	<p>The trend observed for a borough and a county may be only local trends. To check whether this statement is true or false, the percentage of ULEVs for each administrative 
-	   tier (e.g., Local Authorities(LA), regions, counties, metropolitan area) is calculated and results given in figure below. The boxplot figure highlights a continuous 
+	   tier (e.g., Local Authorities (LA), regions, counties, metropolitan area) is calculated and results given in figure below. The boxplot figure highlights a continuous 
 	   increase in the percentage of ULEVs in the UK globally. Mind the y-axis which uses logarithmic scale. The median value went up from 0.02% in 2011 to 0.75% in 2020. 
 	   The minimum value raised from 0% in 2011 to 0.19% in 2020. These values remain low, but the increasing trend can be perceived.</p>
 	<br>
 	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/figBoxplotULEVPercentage2011_2020.png" height="100%"></p>
 	<br>
-	<p>The increasing trend of ULEV percentage in not only local but global trend in the UK. The figure below shows a scatter plot of ULEV number versus cars number again 
+	<p>The increasing trend of ULEV percentage in not only local but global trend in the UK. The animated figure below shows a scatter plot of ULEV number versus cars number again 
 	   for each administrative tier available from 2011 to 2020. Three dashed lines have been added as guidelines to quickly identify the performance of each area. Mind the 
 	   axis which use logarithmic scale. For 2020, the majority of points are below the 5% line and about 65% of the area have 1% or less. Only 2 areas are above 10% (Slough 
 	   and City of London) and about 10 areas between 5 and 10%.</p>
@@ -95,43 +95,43 @@
 	   colour represents the minimum power available per charging stations. In some stations made of multiple connectors, it can be found different power. Here the worst case 
 	   is taken considering the lowest power available. Few clusters can be seen on the map, they are most of time matching with the major town centre such as Colchester, 
 	   Chelmsford, Thurrock, or Southend-on-Sea. However, Basildon which is the fourth largest city does not have a similar charging stations cluster.</p>
-	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/ChargingStationsEssex2021.png" height="100%"></p>
+	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/ChargingStationsEssex2021.png" width="75%"></p>
 	<div class="title2">3. ULEV forecast</div>
 	<p>The purpose of this part is to forecast the number of ULEVs in the next years until 2050 for 3 scenarios: baseline (based on government petrol and diesel vehicles ban 
 	   policy), low (assuming 20% increase every year), and high (opposite behaviour as low scenario). The forecast of ULEV is key to define a charging infrastructure 
 	   development plan that is suitable according to the charging demand led by the number and location of ULEVs. </p>
 	<br>
-	<div class="title3">3.1. Vehicle and cars ownership growth estimation</div>
+	<div class="title3">3.1. Vehicles and cars ownership growth estimation</div>
 	<p>A 2018 Department for Transport (DfT) report forecasts an increase of 30% to 45% of car ownership from 2015 (29 million) to 2050 (38 to 42 million) in England and 
 	   Wales. From the data analysed, the average and median cars stock increase is 1% for the last 15 years. Assuming 1% increase per year, it is predicted to have 40.7 
 	   million of cars in 2050 in GB which is within the range predicted by DfT. The data available were for GB which includes Scotland on top of England and Wales, that 
 	   explains the estimation from the data slightly closer to the higher range from DfT report.<br>ULEV category does not only include cars but also LGV, and HGV. Cars 
 	   represents the majority of ULEVs hence cars and vehicles (cars + LGV + HGV) categories are assumed to follow the same trend.
 	</p>
-	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/Actual and forecasted cars stock in GB.png" height="100%"></p>
+	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/Actual and forecasted cars stock in GB.png" width="60%"></p>
 	<div class="title3">3.2. Define new ULEV sales scenario share</div>
 	<p>The British government announced to ban petrol and diesel cars and vans sales by 2030 and hybrid and PHEV by 2035. In 2030, 100% of new cars and vans sales will be 
 	   only ULEV (BEV or PHEV). The government measures to tackle road pollution can be used as targets for the sales scenario. The forecasted new cars and vans ULEV sales 
 	   can be interpolated between 2020 actual data and 2030 when only new BEV or PHEV cars and vans could be sold. Baseline scenario assumes a linear interpolation. Low 
 	   scenario assumes 20% increase from the previous year to stay close to the current growth. High scenario assumes the opposite behaviour as low scenario.</p>
-	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/New ULEV sales share per scenario in GB until 2030.png" height="100%"></p>
+	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/New ULEV sales share per scenario in GB until 2030.png" width="60%"></p>
 	<div class="title3">3.3. Calculate number of first-time registered vehicle and ULEV per year</div>
 	<p>The number of first-time registered vehicle is calculated using the predicted vehicle stock and scrappage value previously calculated. The scrappage rate is based on
 	   data and the rate of scrappage is assuming to increase by 1% per year. From 2030, all the scenarios predict the same amount of ULEV registered for the first-time due 
 	   to the government ban. The baseline scenario growth is linear while the low scenario starts growing at moderate rate before a high increase between 2029 and 2030 to 
 	   follow the regulation. High scenario shows a quicker uptake until 2027 when the new ULEV sales reach 100%.</p>
-	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/Actual and forecasted ULEV first time registered in GB.png" height="100%"></p>
+	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/Actual and forecasted ULEV first time registered in GB.png" width="60%"></p>
 	<div class="title3">3.4. Forecasts the total amount of ULEV by 2050</div>
 	<p>In 2025, it is forecasted between 1.8 and 5.3 million ULEVs on the road compared to 0.4 million in 2020. When petrol and diesel sales ban will be effective in 2030, it 
 	   is forecasted between 6.5 to 14.5 million ULEVs registered. The high scenario predicts 100% of ULEV by 2046 while the low scenario projects 100% ULEV after 2050.</p>
-	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/Actual and forecasted ULEV stock in GB until 2050.png" height="100%"></p> 
+	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/Actual and forecasted ULEV stock in GB until 2050.png" width="60%"></p> 
 	<div class="title3">3.5. Forecasts comparison and validation</div>
 	<p>These predictions are compared with other forecasts to validate the methods and results. Two forecasts from the Climate Change Committee (CCC) and from the Society of 
 	   Motor Manufacturers and Traders (SMMT) published respectively in December 2020 and October 2021 are used for comparison. The CCC forecasts a quicker ULEV uptakes 
-	   between 2030 and 2045 than AVL forecasts. From 2045, both the CCC and AVL predictions are similar. SMMT forecasts up to 2035 for cars only. It means a lower prediction 
-	   than AVL forecasts that consider cars and vans. This difference (about 10% less) is not a big issue considering the prediction margin error. All SMMT scenarios are 
-	   within AVL low and high forecasted scenarios except for SMMT low scenario. AVL forecasts are comparable to others despite some differences probably due to assumptions 
-	   taken, data and methodology followed.</p>
+	   between 2030 and 2045 than the calculated forecasts. From 2045, both the CCC and calculated predictions are similar. SMMT forecasts up to 2035 for cars only. It means 
+	   a lower prediction than the calculated forecasts that consider cars and vans. This difference (about 10% less) is not a big issue considering the prediction margin error. 
+	   All SMMT scenarios are within low and high forecasted scenarios except for SMMT low scenario. The calculated forecasts are comparable to others despite some differences 
+	   probably due to assumptions taken, data and methodology followed.</p>
 	<!-- <div class="container"> -->
     <table style="width:100%">
 		<colgroup>
@@ -140,11 +140,12 @@
 		</colgroup>
 		<tbody>
 			<tr>
-				<td align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/ULEV cars and vans forecasts comparison with the CCC.png" height="100%"></td>
-				<td align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/ULEV cars and vans forecasts comparison with SMMT.png" height="100%"></td>
+				<td align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/ULEV cars and vans forecasts comparison with the CCC.png" width="80%"></td>
+				<td align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/ULEV cars and vans forecasts comparison with SMMT.png" width="80%"></td>
 			</tr>
 		</tbody>  
 	</table>
+	<br>
 	<!-- </div> -->
 	<p>This forecast method developed and validated at GB level, is applied to Basildon borough which is the chosen area where the location of charging infrastructure will be 
 	   defined. The number of ULEV is predicted assuming the baseline scenario. It is assumed that ULEV is only made of BEV and PHEV. As BEV and PHEV have different charging 
@@ -159,8 +160,8 @@
 		</colgroup>
 		<tbody>
 			<tr>
-				<td align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/Actual and forecasted number of vehicles registered in Basildon.png" height="100%"></td>
-				<td align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/Actual and forecasted vehicles registered stock share in Basildon.png" height="100%"></td>
+				<td align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/Actual and forecasted number of vehicles registered in Basildon.png" width="80%"></td>
+				<td align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/Actual and forecasted vehicles registered stock share in Basildon.png" width="80%"></td>
 			</tr>
 		</tbody>  
 	</table>
@@ -178,7 +179,8 @@
 	   or building and their locations is required. This is available from Unique Property Number Reference (UPRN) datasets from Ordnance Survey. These datasets do not need 
 	   any pre-processing, they are ready to be used. The Basildon borough boundaries data pre-processed earlier, and the additional data queried enable the map (figure below),
 	   to be created using QGIS.</p>
-	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/ResidentialAreaChargingStationBasildon.png" height="100%"></p> 
+	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/ResidentialAreaChargingStationBasildon.png" width="75%"></p> 
+	<br>
 	<p>The UPRN points are not displayed on the map as there are about 81,000 households. The UPRN points have been filtered based on the residential areas. This number of 
 	   households is compared with the real figures from official sources to validate the approach. As mentioned before there are only 18 charging stations in Basildon and 
 	   none of them are located within a residential area. The households without private driveway are very unlikely to purchase a BEV if home charging is not possible.</p>
@@ -188,13 +190,15 @@
 	   part predicted 3,600 ULEVs in Basildon for 2022 with equal share between BEV and PHEV, 1,800 vehicles each. A Python script embedded to QGIS is created to randomly 
 	   allocate the ULEV ensuring a balance spread. The light purple points are the households without any ULEV, the blue points are the households with one ULEV and the red 
 	   points are households with two ULEVs.</p>
-	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/ExampleULEVRandomAllocation.png" height="100%"></p>  
+	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/ExampleULEVRandomAllocation.png" width="75%"></p> 
+	<br>	
 	<p>The number of CS must be defined considering the demand. This demand will be calculated based on average vehicle usage and range capacity. On average, the daily distance
        driven in the UK was 32km per day (20 miles/day) in 2019. The BEV and PHEV have different ranges, the approach taken consist of calculating the average weighted BEV and 
 	   PHEV electric range using the 20 most registered BEVs and PHEVs in the UK in 2021. The ranges considered are the one given by homologation tests. The calculated weighted
 	   average is 227km. On average, a BEV/PHEV driver needs to fully charge its battery every seven days. It means one CS is sufficient for seven ULEVs. This averaged value 
 	   is used as guideline to initialise the model, then some adjustments could be done for a better CS coverage.</p>
-	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/ExampleULEVSnapped.png" height="100%"></p>
+	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/ExampleULEVSnapped.png" width="75%"></p>
+	<br>
 	<p>The UPRN locations with at least one ULEV are snapped to the closest road. This is important to snap the points to the closest road as the distance between the 
 	   households and the CS is calculated using the road layout. A Python script, using scikit-learn library, embedded to QGIS is developed to define the CS locations. The 
 	   script handles iteratively each residential area with a for loop to: <br>
@@ -205,10 +209,11 @@
 		-	Calculate the distance between the centroid and household using road layout<br>
 		-	If minimum distance ≥ threshold add a CS and repeat above steps up to 10 times<br>
 	   The minimum distance threshold is set as 200m as it is within acceptable walking distance. The additional iterations due to the minimum distance criteria is arbitrary 
-	   limited to 10 to avoid infinite loop. The script runs about 40 minutes on Windows 10 64bits with processor i5-8350U 1.9GHZ, 8GB RAM. The Figure 26 gives an example of 
+	   limited to 10 to avoid infinite loop. The script runs about 40 minutes on Windows 10 64bits with processor i5-8350U 1.9GHZ, 8GB RAM. The figure below gives an example of 
 	   CS locations for a neighbourhood. The initial CS number is 531 and after checking the distance between the CS and the households the number of CS is increased by 115 
 	   to reach 646 CS.</p>
-	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/ExampleChargingStationLocations.png" height="100%"></p>
+	<p align="center"><img src="https://florentdsgree.github.io/ChargingStationLocationsBasildon/ExampleChargingStationLocations.png" width="75%"></p>
+	<br>
 	<p>Charging station is a topic that must be planned ahead considering the charging demand and the limitations due to for example the grid capacity. The simple approach 
 	   detailed in this paper is easy to implement. It can be used as a first planning step to understand the current situation for a given area and suggest where the charging
 	   stations could be installed. The work described is limited to home charging, in reality the charging can be done in other places, e.g., office, shopping car park.<br>
